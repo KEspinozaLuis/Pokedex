@@ -23,7 +23,3 @@ export const getPokemons = () => {
         }
     }
 }
-
-export const getPokemonsId = (id) => {
-    
-}

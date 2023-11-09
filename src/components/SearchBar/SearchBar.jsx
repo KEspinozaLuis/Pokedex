@@ -12,7 +12,7 @@ const SearchBar = () => {
 					id=''
 					// value={valueSearch}
 					// onChange={onInputChange}
-					placeholder='Buscar nombre de pokemon'
+					placeholder='Search name of pokemon'
 				/>
             </div>
             <button className={styles.btnSearch}>Search</button>

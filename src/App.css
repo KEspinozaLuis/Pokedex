@@ -6,6 +6,7 @@
 	--color-white: #ffffff;
 	--color-black: #000000;
 	--color-gray: #555555;
+	--color-grayLight: #dddddd;
 	--color-fire: #ff7402;
 	--color-grass: #9bcc50;
 	--color-steel: #9eb7b8;
@@ -35,37 +36,20 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+.btn{
+	background-color: initial;
+	border: none;
+}
 
 body {
 	font-family: 'Montserrat';
+	position: relative;
 }
 /* Globales */
 .container {
-	max-width: 1200px;
+	max-width: 1100px;
 	margin: 0 auto;
 }
-
-
-/* Btn Filter */
-.container-filter {
-	display: flex;
-}
-
-.icon-filter {
-	display: flex;
-	align-items: center;
-	gap: 15px;
-
-	margin-bottom: 20px;
-	cursor: pointer;
-}
-
-.icon-filter .icon {
-	width: 30px;
-	height: 30px;
-	stroke: var(--color-gray);
-}
-
 
 /* Types of Pokemon */
 .card-types{
@@ -150,50 +134,6 @@ body {
 
 .dark {
 	background-color: var(--color-dark);
-}
-
-/* Container Filters */
-.container-filters {
-	display: flex;
-	justify-content: center;
-
-	position: fixed;
-	top: 0;
-	left: -300px;
-	width: 250px;
-
-	color: var(--color-gray);
-	background-color: #f2f2f2;
-	height: 100%;
-	padding-top: 140px;
-	transition: all 0.3s linear;
-}
-
-.container-filters.active {
-	left: 0;
-}
-
-.filter-by-type {
-	display: flex;
-	flex-direction: column;
-
-	gap: 20px;
-}
-
-.filter-by-type span {
-	font-weight: 700;
-	font-size: 22px;
-}
-
-.group-type {
-	display: flex;
-	gap: 10px;
-
-	margin-left: 15px;
-}
-
-.group-type label {
-	cursor: pointer;
 }
 
 /* Search Page */

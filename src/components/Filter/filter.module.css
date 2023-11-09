@@ -1,0 +1,29 @@
+
+.containerFilter{
+    background-color: var(--color-grayLight);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    transition: .3s all;
+}
+.active{
+    left: 0;
+}
+
+.titleFilter{
+    color: var(--color-gray);
+    margin-bottom: 1.5rem;
+}
+.contentCheck{
+    margin: 0.7rem 0;
+    color: var(--color-gray);
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}

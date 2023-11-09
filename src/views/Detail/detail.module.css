@@ -1,28 +1,23 @@
 .mainPokemon{
     display: flex;
 	flex-direction: column;
-	margin-top: 100px;
 	margin-bottom: 50px;
 }
 .headerMainPokemon{
-    margin-top: 20px;
+    margin: 0 0 5rem;
 	display: flex;
+	justify-content: center;
 	align-items: center;
-	position: relative;
+	gap: 10rem;
 }
 .numberPokemon{
-    position: absolute;
-	top: -130px;
-	left: 0;
-	font-size: 200px;
+	font-size: 12.5rem;
 	font-weight: 700;
 	color: var(--color-primary-hover);
 }
 .containerImagePokemon{
-    order: 2;
-	flex: 1;
 	padding: 25px 25px 25px 0;
-	height: 400px;
+	height: 500px;
 }
 .containerImagePokemon img{
     height: 100%;
@@ -31,8 +26,6 @@
 .containerInfoPokemon{
     display: flex;
 	flex-direction: column;
-	order: 1;
-	flex: 1;
 }
 .containerInfoPokemon h1{
     text-align: right;
