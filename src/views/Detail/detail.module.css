@@ -1,0 +1,83 @@
+.mainPokemon{
+    display: flex;
+	flex-direction: column;
+	margin-top: 100px;
+	margin-bottom: 50px;
+}
+.headerMainPokemon{
+    margin-top: 20px;
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+.numberPokemon{
+    position: absolute;
+	top: -130px;
+	left: 0;
+	font-size: 200px;
+	font-weight: 700;
+	color: var(--color-primary-hover);
+}
+.containerImagePokemon{
+    order: 2;
+	flex: 1;
+	padding: 25px 25px 25px 0;
+	height: 400px;
+}
+.containerImagePokemon img{
+    height: 100%;
+	width: 100%;
+}
+.containerInfoPokemon{
+    display: flex;
+	flex-direction: column;
+	order: 1;
+	flex: 1;
+}
+.containerInfoPokemon h1{
+    text-align: right;
+	font-size: 60px;
+}
+.infoPokemon{
+    display: flex;
+	justify-content: space-between;
+	margin-top: 20px;
+}
+
+.groupInfo{
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.groupInfo p {
+	font-weight: 700;
+	font-size: 20px;
+}
+.containerStats{
+    display: flex;
+	gap: 50px;
+	align-items: center;
+}
+.stats{
+    display: flex;
+	flex-direction: column;
+	gap: 20px;
+	flex: 1;
+}
+.statsGroup{
+    display: flex;
+	align-items: center;
+	gap: 20px;
+}
+.statsGroup span{
+    flex: 20%;
+	font-weight: 500;
+	font-size: 18px;
+}
+.progressBar{
+    width: 100%;
+	height: 30px;
+	background-color: var(--color-primary);
+	border-radius: 10px;
+}
