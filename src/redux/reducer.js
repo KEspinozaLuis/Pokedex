@@ -1,7 +1,8 @@
-import { GET_POKEMONS } from "./actionTypes";
+import { GET_POKEMONS, SEARCH_NAME } from "./actionTypes";
 
 const initialState = {
-    pokemons: []
+    pokemons: [],
+    backupPokemons: []
 }
 
 const rootReducer = (state = initialState, {type, payload}) =>{
@@ -9,8 +10,15 @@ const rootReducer = (state = initialState, {type, payload}) =>{
         case GET_POKEMONS:
             return {
                 ...state,
-                pokemons: payload
+                pokemons: payload,
+                backupPokemons: payload
             };
+        case SEARCH_NAME:
+            const searchPokemon = state.backupPokemons.filter( pokemon => pokemon.name.toLowerCase().includes(payload.toLowerCase())) 
+            return{
+                ...state,
+                pokemons: searchPokemon
+            }
         default:
             return {...state};
     }

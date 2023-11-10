@@ -1,4 +1,4 @@
-import { GET_POKEMONS } from "./actionTypes";
+import { GET_POKEMONS, SEARCH_NAME } from "./actionTypes";
 import axios from "axios";
 
 const URL_API = "https://pokeapi.co/api/v2/pokemon?limit=100&offset=0.";
@@ -21,5 +21,13 @@ export const getPokemons = () => {
         } catch (error) {
             console.log(error);
         }
+    }
+}
+
+
+export const searchName = (payload)=>{
+    return {
+        type: SEARCH_NAME,
+        payload
     }
 }
