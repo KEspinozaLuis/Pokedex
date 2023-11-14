@@ -1,4 +1,7 @@
-import { GET_POKEMONS, SEARCH_NAME } from "./actionTypes";
+import { 
+    GET_POKEMONS, 
+    SEARCH_NAME,
+    FILTER_TYPE } from "./actionTypes";
 import axios from "axios";
 
 const URL_API = "https://pokeapi.co/api/v2/pokemon?limit=100&offset=0.";
@@ -28,6 +31,13 @@ export const getPokemons = () => {
 export const searchName = (payload)=>{
     return {
         type: SEARCH_NAME,
+        payload
+    }
+}
+
+export const filterType = (payload) =>{
+    return {
+        type: FILTER_TYPE,
         payload
     }
 }

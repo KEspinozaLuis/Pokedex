@@ -1,11 +1,17 @@
-import { GET_POKEMONS, SEARCH_NAME } from "./actionTypes";
+import { 
+    GET_POKEMONS, 
+    SEARCH_NAME,
+    FILTER_TYPE
+ } from "./actionTypes";
 
 const initialState = {
     pokemons: [],
-    backupPokemons: []
+    backupPokemons: [],
+    filter: []
 }
 
 const rootReducer = (state = initialState, {type, payload}) =>{
+    
     switch(type){
         case GET_POKEMONS:
             return {
@@ -18,6 +24,14 @@ const rootReducer = (state = initialState, {type, payload}) =>{
             return{
                 ...state,
                 pokemons: searchPokemon
+            }
+        case FILTER_TYPE:
+            const filterTypes = state.backupPokemons.filter(pokemon => pokemon.types.map(type=>type.type.name).includes(payload)) 
+            state.filter = [...state.filter, ...filterTypes]; 
+
+            return {
+                ...state,
+                pokemons: state.filter
             }
         default:
             return {...state};
