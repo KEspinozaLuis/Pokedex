@@ -36,6 +36,9 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+ul, li{
+	list-style: none;
+}
 .btn{
 	background-color: initial;
 	border: none;
