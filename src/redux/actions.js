@@ -2,7 +2,9 @@ import {
     GET_POKEMONS, 
     SEARCH_NAME,
     FILTER_TYPE,
-    REMOVE_FILTER } from "./actionTypes";
+    REMOVE_FILTER,
+    CLEAR_FILTER
+} from "./actionTypes";
 import axios from "axios";
 
 const URL_API = "https://pokeapi.co/api/v2/pokemon?limit=100&offset=0.";
@@ -47,5 +49,11 @@ export const removeFilter = (payload) => {
     return {
         type: REMOVE_FILTER,
         payload
+    }
+}
+
+export const clearFilter = () =>{
+    return {
+        type: CLEAR_FILTER
     }
 }

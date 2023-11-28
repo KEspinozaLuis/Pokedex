@@ -2,7 +2,8 @@ import {
     GET_POKEMONS, 
     SEARCH_NAME,
     FILTER_TYPE,
-    REMOVE_FILTER
+    REMOVE_FILTER,
+    CLEAR_FILTER
  } from "./actionTypes";
 
 const initialState = {
@@ -41,6 +42,12 @@ const rootReducer = (state = initialState, {type, payload}) =>{
             return {
                 ...state,
                 pokemons: state.filters.length === 0 ? state.backupPokemons : state.filters
+            }
+        case CLEAR_FILTER:
+            return {
+                ...state,
+                pokemons: state.backupPokemons,
+                filters: []
             }
         default:
             return {...state};

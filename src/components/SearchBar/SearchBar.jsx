@@ -28,7 +28,7 @@ const SearchBar = () => {
 					placeholder='Search name of pokemon'
 				/>
             </div>
-            <button className={styles.btnSearch} onClick={handleSearch}>Search</button>
+            <button className={`btn btnPrimary ${styles.btnSearch}`} onClick={handleSearch}>Search</button>
         </div>
         
     )

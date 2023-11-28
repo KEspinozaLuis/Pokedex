@@ -39,6 +39,18 @@
 .btn{
 	background-color: initial;
 	border: none;
+	cursor: pointer;
+}
+.btnPrimary{
+	background-color: var(--color-primary);
+	color: var(--color-white);
+	font-family: inherit;
+	letter-spacing: 2px;
+}
+
+.btnPrimary:hover{
+	background-color: var(--color-primary-hover);
+	color: var(--color-black);
 }
 
 body {

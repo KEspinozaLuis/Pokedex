@@ -1,6 +1,10 @@
 import styles from "./filter.module.css"
 import { useDispatch} from "react-redux";
-import { filterType, removeFilter } from "../../redux/actions";
+import { 
+    filterType, 
+    removeFilter,
+    clearFilter
+} from "../../redux/actions";
 
 const Filter = ({active}) => {
     const dispatch = useDispatch();
@@ -13,6 +17,12 @@ const Filter = ({active}) => {
             dispatch(removeFilter(event.target.name))
         }
     }    
+    //Limpiar filtros
+    const clearCheckbox = (event) => {
+        const checkboxs = document.querySelectorAll('input[type="checkbox"]');
+        checkboxs.forEach(checkbox => checkbox.checked = false);
+        dispatch(clearFilter());
+    }
 
     return (
        <section className={`${styles.containerFilter} ${active && styles.active}`}>
@@ -162,7 +172,9 @@ const Filter = ({active}) => {
                     />
                     <span>Poison</span>
                 </div>
+                <button className={`${styles.btnClear} btn btnPrimary`} onClick={clearCheckbox}>Clear</button>
             </div>
+            
        </section>
     )
 }

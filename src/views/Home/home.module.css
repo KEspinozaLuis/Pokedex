@@ -1,3 +1,9 @@
+.contentBtn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .textFilter{
     margin: 1rem 0;
     display: flex;
@@ -5,5 +11,4 @@
     gap: 0.5rem;
     font-weight: 700;
     font-size: 1rem;
-    cursor: pointer;
 }
