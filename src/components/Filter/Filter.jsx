@@ -1,28 +1,17 @@
-import { useState } from "react";
 import styles from "./filter.module.css"
-import { useDispatch, useSelector } from "react-redux";
-import { filterType } from "../../redux/actions";
+import { useDispatch} from "react-redux";
+import { filterType, removeFilter } from "../../redux/actions";
 
 const Filter = ({active}) => {
-    // const pokemons = useSelector(state=> state.backupPokemons)
     const dispatch = useDispatch();
-
-    //Captura los tipos en un estado local
-    // const [types, setTypes] = useState([])
-    // const handleCheckbox = (event) =>{
-    //     if(event.target.checked){
-    //         setTypes([...types, event.target.name])
-    //      }else{
-    //          const filterType = types.filter(type => type !== event.target.name);
-    //         setTypes(filterType)
-    //     }
-    // }
 
     //Capturar tipo y pasarlo como payload
     const handleCheckbox = (event) =>{
         if (event.target.checked) {
             dispatch(filterType(event.target.name));
-		}
+		}else{
+            dispatch(removeFilter(event.target.name))
+        }
     }    
 
     return (

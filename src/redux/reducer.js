@@ -1,17 +1,17 @@
 import { 
     GET_POKEMONS, 
     SEARCH_NAME,
-    FILTER_TYPE
+    FILTER_TYPE,
+    REMOVE_FILTER
  } from "./actionTypes";
 
 const initialState = {
     pokemons: [],
     backupPokemons: [],
-    filter: []
+    filters: []
 }
 
 const rootReducer = (state = initialState, {type, payload}) =>{
-    
     switch(type){
         case GET_POKEMONS:
             return {
@@ -26,12 +26,21 @@ const rootReducer = (state = initialState, {type, payload}) =>{
                 pokemons: searchPokemon
             }
         case FILTER_TYPE:
-            const filterTypes = state.backupPokemons.filter(pokemon => pokemon.types.map(type=>type.type.name).includes(payload)) 
-            state.filter = [...state.filter, ...filterTypes]; 
+            const filterTypes = state.backupPokemons.filter(pokemon => pokemon.types.map(type=>type.type.name).includes(payload));
+            const allFilterPokemons = [...state.filters, ...filterTypes]; 
+            const removeRepeat = new Set(allFilterPokemons);
+            state.filters = [...removeRepeat];
 
             return {
                 ...state,
-                pokemons: state.filter
+                pokemons: state.filters
+            }
+        case REMOVE_FILTER: 
+            const removeFilter = state.filters.filter(pokemon => !pokemon.types.map(type => type.type.name).includes(payload))
+            state.filters = removeFilter;
+            return {
+                ...state,
+                pokemons: state.filters.length === 0 ? state.backupPokemons : state.filters
             }
         default:
             return {...state};
