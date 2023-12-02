@@ -12,7 +12,7 @@
 	margin: 3rem 0;
 }
 .pagination li>a{
-	background-color: var(--color-primary);
+	background-color: var(--color-primary-hover);
 	text-align: center;
 	display: block;
 	width: 2rem;
@@ -21,12 +21,13 @@
 	color: var(--color-white);
 	border-radius: 50%;
 	cursor: pointer;
+	font-size: 0.8rem;
 }
 .pagination li.activePage>a{
-	background-color: var(--color-primary-hover);
+	background-color: var(--color-primary);
 }
 
 .pagination .disabled >a{
-	background-color: var(--color-normal);
+	background-color: var(--color-dark);
 	cursor: not-allowed;
 }

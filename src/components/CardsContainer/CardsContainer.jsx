@@ -18,7 +18,6 @@ const CardsContainer = () => {
         setCurrentPage(selected)
     }
 
-    console.log("currentPage",currentPage)
     return (
         <section className="container">
             <div className={styles.cardList}>

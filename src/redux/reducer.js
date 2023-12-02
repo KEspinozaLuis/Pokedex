@@ -13,6 +13,8 @@ const initialState = {
 }
 
 const rootReducer = (state = initialState, {type, payload}) =>{
+    const filterSearch = state.filters.length !== 0 ? state.filters : state.backupPokemons
+
     switch(type){
         case GET_POKEMONS:
             return {
@@ -21,7 +23,7 @@ const rootReducer = (state = initialState, {type, payload}) =>{
                 backupPokemons: payload
             };
         case SEARCH_NAME:
-            const searchPokemon = state.backupPokemons.filter( pokemon => pokemon.name.toLowerCase().includes(payload.toLowerCase())) 
+            const searchPokemon = [...filterSearch].filter( pokemon => pokemon.name.toLowerCase().includes(payload.toLowerCase())) 
             return{
                 ...state,
                 pokemons: searchPokemon
