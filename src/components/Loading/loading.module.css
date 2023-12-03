@@ -1,0 +1,23 @@
+.loading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 3rem 0;
+    min-height: calc(100vh - 138px);
+}
+
+.loading img{
+    width: 120px;
+    animation: roll 1.5s linear infinite;
+}
+
+@keyframes roll {
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}

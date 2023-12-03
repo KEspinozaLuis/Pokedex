@@ -18,6 +18,7 @@
 .containerImagePokemon{
 	padding: 25px 25px 25px 0;
 	height: 500px;
+	animation: animateImage 1s
 }
 .containerImagePokemon img{
     height: 100%;
@@ -26,6 +27,7 @@
 .containerInfoPokemon{
     display: flex;
 	flex-direction: column;
+	animation: animateInfo 1s;
 }
 .containerInfoPokemon h1{
     text-align: right;
@@ -51,6 +53,7 @@
     display: flex;
 	gap: 50px;
 	align-items: center;
+	animation: animateStats 1s;
 }
 .stats{
     display: flex;
@@ -73,4 +76,31 @@
 	height: 30px;
 	background-color: var(--color-primary);
 	border-radius: 10px;
+}
+
+@keyframes animateInfo {
+	0%{
+		transform: translateX(-10rem);
+	}
+	100%{
+		transform: translateX(0);
+	}
+}
+
+@keyframes animateImage {
+	0%{
+		transform: translateX(10rem);
+	}
+	100%{
+		transform: translateX(0);
+	}
+}
+
+@keyframes animateStats {
+	0%{
+		transform: translateY(10rem);
+	}
+	100%{
+		transform: translateX(0);
+	}
 }

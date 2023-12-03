@@ -10,6 +10,8 @@
 	justify-content: center;
 	border-radius: 5px;
 	height: 250px;
+	padding: 1rem;
+	transition: all .3s;
 }
 
 .cardImg img{
@@ -29,3 +31,8 @@
     color: var(--color-gray);
 }
 
+@media (min-width: 992px){
+	.cardPokemon:hover .cardImg{
+		padding: 0;
+	}
+}
