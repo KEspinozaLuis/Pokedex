@@ -1,7 +1,7 @@
 .containerSearch{
     display: flex;
 	align-items: center;
-	gap: 15px;
+	gap: 8px;
 }
 
 .containerInput {
@@ -9,7 +9,7 @@
 	align-items: center;
 	gap: 10px;
 	border: 1px solid var(--color-gray);
-	padding: 15px 20px;
+	padding: 8px 16px;
 	border-radius: 25px;
 }
 
@@ -19,15 +19,39 @@
 
 .containerInput input {
 	font-family: inherit;
-	width: 300px;
+	width: 60px;
 	border: none;
 	outline: none;
-	font-size: 15px;
+	font-size: 14px;
 }
 
 .btnSearch{
 	outline: none;
 	border-radius: 25px;
-	padding: 15px 30px;
+	padding: 10px 20px;
 }
 
+@media (min-width: 480px){
+	.containerSearch{
+		gap: 15px;
+	}
+	.containerInput{
+		padding: 10px 20px;
+	}
+	.containerInput input {
+		width: 80px;
+	}
+}
+
+@media (min-width: 768px){
+	.containerInput{
+		padding: 15px 20px;
+	}
+	.containerInput input {
+		width: 300px;
+		font-size: 15px;
+	}
+	.btnSearch{
+		padding: 15px 30px;
+	}
+}

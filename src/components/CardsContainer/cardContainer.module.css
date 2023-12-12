@@ -1,7 +1,5 @@
 .cardList{
     display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	gap: 20px;
 }
 
 /*Paginación*/
@@ -30,4 +28,23 @@
 .pagination .disabled >a{
 	background-color: var(--color-dark);
 	cursor: not-allowed;
+}
+
+@media (min-width: 768px){
+	.cardList{
+		grid-template-columns: repeat(2, 1fr);
+		gap: 20px;
+	}
+}
+
+@media (min-width: 992px){
+	.cardList{
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media (min-width: 1200px){
+	.cardList{
+		grid-template-columns: repeat(4, 1fr);
+	}
 }

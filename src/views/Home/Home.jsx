@@ -28,7 +28,7 @@ const HomePage = () => {
         <>
         { loading 
          ? <Loading />
-         : <><Filter active={active}/>
+         : <><Filter active={active} setActive={setActive}/>
          <div className="container">
              <button className={`${styles.textFilter} btn`} onClick={openFilter}>
                  <BsFilterSquareFill/>

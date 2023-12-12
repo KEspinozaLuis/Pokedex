@@ -4,11 +4,11 @@
     position: fixed;
     top: 0;
     bottom: 0;
-    left: -300px;
+    left: -100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 170px;
+    width: 100%;
     transition: .3s all;
 }
 .active{
@@ -32,4 +32,17 @@
     width: 100%;
     border-radius: 0.5rem;
     margin-top: 1rem;
+}
+
+.btnClose{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.1rem;
+}
+
+@media (min-width: 992px){
+    .containerFilter{
+        width: 170px;
+    }
 }

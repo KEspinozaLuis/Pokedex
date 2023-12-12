@@ -5,8 +5,9 @@ import {
     removeFilter,
     clearFilter
 } from "../../redux/actions";
+import { BsFillXCircleFill } from "react-icons/bs";
 
-const Filter = ({active}) => {
+const Filter = ({active, setActive}) => {
     const dispatch = useDispatch();
 
     //Capturar tipo y pasarlo como payload
@@ -24,8 +25,14 @@ const Filter = ({active}) => {
         dispatch(clearFilter());
     }
 
+    const handleClose = (event) =>{
+        event.preventDefault();
+        setActive(false);
+    }
+
     return (
        <section className={`${styles.containerFilter} ${active && styles.active}`}>
+            <button className={`btn ${styles.btnClose}`} onClick={handleClose}>< BsFillXCircleFill/></button>
             <div className={styles.contentFilter}>
                 <h3 className={styles.titleFilter}>Type</h3>
                 <div className={styles.contentCheck}>
