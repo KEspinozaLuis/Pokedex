@@ -16,6 +16,7 @@
     flex-direction: column;
     align-items: center;
     gap: 2rem;
+    animation: var(--leftHorizontal);
 }
 .logo{
     max-width: 20rem;
@@ -28,8 +29,10 @@
 .text{
     max-width: 25rem;
 }
+
 .slider img{
     max-width: 8rem;
+    animation: var(--rightHorizontal);
 }
 
 @media (min-width: 992px){
@@ -42,7 +45,8 @@
         content: "";
         width: 100%;
         height: 40rem;
-        background: linear-gradient(90deg, #1a2f40 23%, #52648a 99%);
+        /* background: linear-gradient(90deg, #1a2f40 23%, #52648a 99%); */
+        background: linear-gradient(-90deg, #006d77 60%, #83c5be 99%);;
         position: absolute;
         right: -33%;
         transform: rotate(-80deg);

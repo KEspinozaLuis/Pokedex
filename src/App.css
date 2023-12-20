@@ -26,7 +26,10 @@
 	--color-electric: #bba909;
 	--color-fairy: #fdb9e9;
 	--color-shadow: #7b62a3;
-	--color-unknow: #757575;	
+	--color-unknow: #757575;
+	--leftHorizontal: leftHorizontal 1s;
+	--rightHorizontal: rightHorizontal 1s;
+	--bottomVertical: bottomVertical 1s;	
 }
 
 * {
@@ -158,5 +161,33 @@ a{
 @media (min-width: 1200px){
 	.container {
 		max-width: 1100px;
+	}
+}
+
+/*Animaciones*/
+@keyframes leftHorizontal {
+	0%{
+		transform: translateX(-10rem);
+	}
+	100%{
+		transform: translateX(0);
+	}
+}
+
+@keyframes rightHorizontal {
+	0%{
+		transform: translateX(10rem);
+	}
+	100%{
+		transform: translateX(0);
+	}
+}
+
+@keyframes bottomVertical {
+	0%{
+		transform: translateY(10rem);
+	}
+	100%{
+		transform: translateX(0);
 	}
 }

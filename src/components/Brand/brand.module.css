@@ -1,7 +1,8 @@
 .brand {
     position: absolute;
     bottom: 1rem;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
+    z-index: 100;
 }
 .social{
     display: flex;
@@ -22,5 +23,5 @@
     width: 1px;
     height: 4rem;
     background-color: var(--color-black);
-    margin: 0.5rem 0 0 0.8rem;
+    margin: 0.5rem 0 0 0.9rem;
 }
