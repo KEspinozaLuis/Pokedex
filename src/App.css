@@ -34,8 +34,18 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+body {
+	font-family: 'Montserrat';
+	position: relative;
+}
 ul, li{
 	list-style: none;
+}
+img{
+	width: 100%;
+}
+a{
+	text-decoration: none;
 }
 .btn{
 	background-color: initial;
@@ -54,10 +64,6 @@ ul, li{
 	color: var(--color-black);
 }
 
-body {
-	font-family: 'Montserrat';
-	position: relative;
-}
 /* Globales */
 .container {
 	max-width: 90vw;

@@ -2,7 +2,7 @@ import './App.css'
 import { Route, Routes, useLocation} from 'react-router-dom'
 
 import Header from './components/Header/Header'
-import Landing from './views/Landing'
+import Landing from './views/Landing/Landing'
 import HomePage from './views/Home/Home'
 import Detail from './views/Detail/Detail'
 
