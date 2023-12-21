@@ -23,7 +23,7 @@ const Detail = () => {
     <>
     {
       loading 
-      ? <Loading/>
+      ? <Loading />
       :<main className={`${styles.mainPokemon} container`}>
         <div className={styles.headerMainPokemon}>
           <div className={styles.containerInfoPokemon}>
